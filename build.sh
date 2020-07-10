@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-apk add --update go build-base git mercurial ca-certificates
+apk add --update go build-base git mercurial ca-certificates tzdata
 cd /src
 go build -ldflags "-X main.Version=$1" -o /bin/logspout
 apk del go git mercurial build-base
